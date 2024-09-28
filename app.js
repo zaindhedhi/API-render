@@ -1,4 +1,5 @@
 let div = document.querySelector('#render')
+let index = 0
 
 fetch("https://jsonplaceholder.typicode.com/users")
 .then(res => res.json())
@@ -6,7 +7,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
 
     console.log(res)
-    let index = 0
+    
     function render(){
         if(index < res.length){
             div.innerHTML = `
